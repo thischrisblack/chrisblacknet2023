@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem 5rem 2rem;
+}
+
+.splash-image {
+    width: 100%;
+    filter: brightness(0.95) contrast(1.1) saturate(90%);
+}
+
+.wisdom {
+    padding: 3rem 0;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    text-align: center;
+    font-style: italic;
+}
+
+.music {
+    grid-area: 'music';
+}
+
+.code {
+    grid-area: 'music';
+}
+
+@media screen and (min-width: 800px) {
+    .columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: ' music code ';
+        column-gap: 6rem;
+    }
+}

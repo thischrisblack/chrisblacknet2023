@@ -1,0 +1,88 @@
+body {
+    color: var(--foreground);
+    line-height: 1.7rem;
+    font-size: 1rem;
+    font-family: var(--text);
+    background: var(--background);
+}
+
+p {
+    margin-bottom: 0.8rem;
+}
+
+a {
+    color: rgb(109, 157, 230);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 4rem;
+    margin: 1rem 0;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+ul {
+    margin: 0.5rem 0;
+}
+
+audio-player {
+    line-height: 75%;
+    font-family: var(--code-text);
+}
+
+.about {
+    padding: 1rem 0 3rem 0;
+
+    > h2 {
+        margin-bottom: 1rem;
+    }
+
+    > p {
+        margin: 2rem 0;
+    }
+}
+
+.list-block {
+    margin-left: 20px;
+
+    > p {
+        margin-bottom: 1rem;
+    }
+}
+
+.press-citation {
+    margin-bottom: 2rem;
+
+    > a {
+        font-style: italic;
+    }
+}
+
+.press-quote {
+    margin: 1rem 0 0.5rem 0;
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 5rem;
+        line-height: 5.5rem;
+    }
+}
