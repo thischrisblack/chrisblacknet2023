@@ -2,64 +2,76 @@
 @font-face {
     font-family: 'Merriweather';
     src: url('../fonts/Merriweather-Regular.ttf');
+    font-display: swap;
 }
 @font-face {
     font-family: 'Merriweather';
     font-style: italic;
     src: url('../fonts/Merriweather-Italic.ttf');
+    font-display: swap;
 }
 @font-face {
     font-family: 'Merriweather';
     font-weight: bold;
     src: url('../fonts/Merriweather-Bold.ttf');
+    font-display: swap;
 }
 @font-face {
     font-family: 'Merriweather';
     font-weight: bold;
     font-style: italic;
     src: url('../fonts/Merriweather-BoldItalic.ttf');
+    font-display: swap;
 }
 @font-face {
     font-family: 'Merriweather Black';
     font-weight: bold;
     src: url('../fonts/Merriweather-Black.ttf');
+    font-display: swap;
 }
 @font-face {
     font-family: 'Merriweather Black';
     font-weight: bold;
     font-style: italic;
     src: url('../fonts/Merriweather-BlackItalic.ttf');
+    font-display: swap;
 }
 
 /* Sans serif font */
 @font-face {
     font-family: 'Open Sans';
     src: url('../fonts/OpenSans-Regular.ttf');
+    font-display: swap;
 }
 @font-face {
     font-family: 'Open Sans';
     font-style: italic;
     src: url('../fonts/OpenSans-Italic.ttf');
+    font-display: swap;
 }
 @font-face {
     font-family: 'Open Sans';
     font-weight: bold;
     src: url('../fonts/OpenSans-Bold.ttf');
+    font-display: swap;
 }
 @font-face {
     font-family: 'Open Sans';
     font-weight: bold;
     font-style: italic;
     src: url('../fonts/OpenSans-BoldItalic.ttf');
+    font-display: swap;
 }
 @font-face {
     font-family: 'Open Sans SemiBold';
     font-weight: bold;
     src: url('../fonts/OpenSans-SemiBold.ttf');
+    font-display: swap;
 }
 @font-face {
     font-family: 'Open Sans SemiBold';
     font-weight: bold;
     font-style: italic;
     src: url('../fonts/OpenSans-SemiBoldItalic.ttf');
+    font-display: swap;
 }
