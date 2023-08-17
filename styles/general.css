@@ -1,32 +1,17 @@
-body {
-    color: var(--foreground);
-    line-height: 1.7rem;
-    font-size: 1rem;
-    font-family: var(--text);
-    background: var(--background);
+html {
+    background: var(--light);
+    color: var(--dark);
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-main {
-    width: 100%;
-    max-width: 1200px;
+body {
+    font-family: var(--font-sans-serif);
+    font-size: 1rem;
     margin: 0 auto;
-    padding: 0 2rem 5rem 2rem;
-}
-
-.splash-image {
-    width: 100%;
-    filter: brightness(0.95) contrast(1.1) saturate(90%);
-}
-
-.wisdom {
-    padding: 3rem 0;
-    font-size: 1.8rem;
-    line-height: 2.2rem;
-    text-align: center;
-    font-style: italic;
+    max-width: 1200px;
+    line-height: 1.7rem;
 }
 
 p {
@@ -34,75 +19,111 @@ p {
 }
 
 a {
-    color: rgb(109, 157, 230);
+    color: var(--link);
     text-decoration: none;
 }
 a:hover {
     text-decoration: underline;
 }
 
+h1,
+h2,
+h3 {
+    font-family: var(--font-serif);
+}
+
 h1 {
     font-size: 2.4rem;
     font-weight: 400;
-    line-height: 4rem;
-    margin: 1rem 0;
+    line-height: 3rem;
 }
 
 h2 {
     font-size: 1.8rem;
-    font-weight: 700;
-    margin-top: 2rem;
+    font-weight: 400;
     margin-bottom: 1.5rem;
+    margin-top: 2rem;
 }
 
 h3 {
     font-size: 1.2rem;
-    font-weight: 700;
-    margin-top: 0.5rem;
+    font-weight: 400;
     margin-bottom: 0.5rem;
+    margin-top: 1rem;
 }
 
 ul {
-    margin: 0.5rem 0 0.5rem 1rem;
+    margin: 0.5rem 0 0.75rem 0.5rem;
 }
 
-audio-player {
-    line-height: 75%;
-    font-family: var(--code-text);
+main {
+    padding: 0 1rem 2rem 1rem;
+}
+
+header {
+    padding: 0.5rem 0;
+}
+header h1 {
+    flex: 1;
+}
+header div {
+    font-size: 0.9rem;
+    font-family: var(--font-serif);
+    font-style: italic;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    border-top: 1px solid #ccc;
+    font-size: 0.9rem;
+}
+
+.splash-image {
+    filter: brightness(1) contrast(1.1) saturate(100%);
+    width: 100%;
+}
+
+.wisdom {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 2.2rem;
+    padding: 1rem 0;
+    text-align: center;
 }
 
 .about {
     padding: 1rem 0 3rem 0;
-
-    > h2 {
-        margin-bottom: 1rem;
-    }
-
-    > p {
-        margin: 2rem 0;
-    }
+}
+.about > h2 {
+    margin-bottom: 1rem;
+}
+.about > p {
+    margin: 2rem 0;
 }
 
 .list-block {
     margin-bottom: 3rem;
-
-    > p {
-        margin-left: 1.2rem;
-        margin-bottom: 1rem;
-    }
+}
+.list-block > p {
+    margin-bottom: 1rem;
+    margin-left: 1.2rem;
 }
 
 .press-block {
-    margin-left: 1.25rem;
     margin-bottom: 3rem;
+    margin-left: 1.25rem;
 }
 
 .press-citation {
     margin-bottom: 2rem;
-
-    > a {
-        font-style: italic;
-    }
+}
+.press-citation > a {
+    font-style: italic;
 }
 
 .press-quote {
@@ -110,8 +131,31 @@ audio-player {
 }
 
 @media screen and (min-width: 800px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem 0;
+    }
+    header div {
+        font-size: 1.1rem;
+    }
+
+    footer {
+        padding: 2rem;
+    }
+
+    .main {
+        padding: 0 2rem 2rem 2rem;
+    }
+
     h1 {
-        font-size: 3rem;
-        line-height: 3.6rem;
+        font-size: 3.6rem;
+        line-height: 4.2rem;
+    }
+
+    .wisdom {
+        font-size: 2rem;
+        padding: 3rem;
     }
 }

@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
-
 :root {
-    --text: 'Libre Baskerville', serif;
-    --foreground: #eee;
-    --background: #111;
+    --font-sans-serif: 'Open Sans', sans-serif;
+    --font-serif: 'Merriweather', Georgia, serif;
+    --light: #fffff5;
+    --dark: #111;
+    --link: rgb(25, 109, 235);
+    --link-bright: rgb(142, 187, 255);
 }
