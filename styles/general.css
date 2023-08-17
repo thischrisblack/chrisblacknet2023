@@ -56,6 +56,10 @@ ul {
     margin: 0.5rem 0 0.75rem 0.5rem;
 }
 
+li {
+    margin: 0.5rem 0;
+}
+
 main {
     padding: 0 1rem 2rem 1rem;
 }
@@ -85,6 +89,7 @@ footer {
 .splash-image {
     filter: brightness(1) contrast(1.1) saturate(100%);
     width: 100%;
+    aspect-ratio: 800 / 915;
 }
 
 .wisdom {
@@ -130,6 +135,14 @@ footer {
     margin: 0.5rem 0;
 }
 
+.full-size {
+    display: none;
+}
+
+.mobile-size {
+    display: inline-block;
+}
+
 @media screen and (min-width: 800px) {
     header {
         display: flex;
@@ -157,5 +170,13 @@ footer {
     .wisdom {
         font-size: 2rem;
         padding: 3rem;
+    }
+
+    .full-size {
+        display: inline-block;
+    }
+
+    .mobile-size {
+        display: none;
     }
 }
