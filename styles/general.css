@@ -179,4 +179,8 @@ footer {
     .mobile-size {
         display: none;
     }
+
+    li {
+        margin: initial;
+    }
 }
