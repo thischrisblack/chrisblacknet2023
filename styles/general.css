@@ -183,4 +183,8 @@ footer {
     li {
         margin: initial;
     }
+
+    ul.performances > li {
+        margin: 1rem 0;
+    }
 }
