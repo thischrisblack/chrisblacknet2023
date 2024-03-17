@@ -42,6 +42,11 @@
                     >.
                 </section>
 
+                <p class="device-warning" id="device-warning">
+                    Unfortunately, these demos won't play on an iPhone. I'm working on it. Meanwhile, please open this
+                    page on any other device.
+                </p>
+
                 <h1>Current Demos</h1>
 
                 <h2>As solo singer/guitarist</h2>
@@ -164,4 +169,10 @@
             </div>
         </footer>
     </body>
+
+    <script>
+        if (/iPhone/.test(navigator.userAgent)) {
+            document.getElementById('device-warning').style.display = 'block';
+        }
+    </script>
 </html>

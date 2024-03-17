@@ -143,6 +143,14 @@ footer {
     display: inline-block;
 }
 
+.device-warning {
+    background: var(--dark);
+    color: var(--light);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    display: none;
+}
+
 @media screen and (min-width: 800px) {
     header {
         display: flex;
