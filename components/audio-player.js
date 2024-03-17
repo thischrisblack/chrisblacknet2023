@@ -69,8 +69,7 @@ class AudioPlayer extends HTMLElement {
         const controls = document.createElement('span');
         controls.id = 'controls';
         shadowRoot.appendChild(controls);
-        controls.onclick = this.playOrPauseAudio;
-        controls.ontouchend = this.playOrPauseAudio;
+        controls.addEventListener('click', this.playOrPauseAudio);
         this.controls = controls;
 
         const timer = document.createElement('span');
@@ -119,7 +118,6 @@ class AudioPlayer extends HTMLElement {
     playOrPauseAudio = () => {
         if (this.player.paused) {
             this.player.play();
-            console.log('HEY', this.controls);
             this.controls.textContent = this.controls.textContent.replace('► ', '❚❚ ');
         } else {
             this.player.pause();
