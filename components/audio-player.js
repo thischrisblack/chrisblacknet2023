@@ -24,8 +24,16 @@ const audioPlayerStyles = `
     cursor: pointer;
     padding: 0;
 
+    svg {
+        margin: 0 4px 0 0px;
+    }
+
     &:hover {
         color: var(--link);
+
+        svg {          
+                fill: var(--link);
+        }
     }
 }
 
@@ -43,6 +51,18 @@ const audioPlayerStyles = `
     display: block;
     margin-bottom: 0.35rem;
 }`;
+
+const playIcon = `
+<svg width="16" height="16" fill="#000" viewBox="0 0 22 18">
+  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.25 12L5.75 5.75V18.25L18.25 12Z"></path>
+</svg>
+`;
+
+const stopIcon = `
+<svg width="16" height="16" fill="#000" viewBox="0 0 22 18">
+  <rect width="12.5" height="12.5" x="5.75" y="5.75" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" rx="1"></rect>
+</svg>
+`;
 
 const formatTime = (time) => {
     const roundedSeconds = Math.floor(time);
@@ -88,7 +108,7 @@ class AudioPlayer extends HTMLElement {
             this.initializeAudioPlayer(newValue);
         }
         if (name === 'name') {
-            this.controls.textContent = '►  ' + newValue;
+            this.controls.innerHTML = playIcon + newValue;
             this.controls.title = `Play ${newValue}`;
         }
     }
@@ -103,25 +123,25 @@ class AudioPlayer extends HTMLElement {
         player.appendChild(source);
         this.appendChild(player);
 
-        player.oncanplay = () => {
+        player.addEventListener('canplay', () => {
             this.duration = player.duration;
             this.player = player;
             this.timer.textContent = `${formatTime(0)} / ${formatTime(this.duration)}`;
-        };
-        player.ontimeupdate = this.updateTime;
-        player.onended = this.resetAudio;
-        player.onerror = () => {
+        });
+        player.addEventListener('timeupdate', this.updateTime);
+        player.addEventListener('ended', this.resetAudio);
+        player.addEventListener('error', () => {
             this.controls.textContent = 'ERROR :(';
-        };
+        });
     };
 
     playOrPauseAudio = () => {
         if (this.player.paused) {
             this.player.play();
-            this.controls.textContent = this.controls.textContent.replace('► ', '❚❚ ');
+            this.controls.innerHTML = this.controls.innerHTML.replace(playIcon, stopIcon);
         } else {
             this.player.pause();
-            this.controls.textContent = this.controls.textContent.replace('❚❚ ', '► ');
+            this.controls.innerHTML = this.controls.innerHTML.replace(stopIcon, playIcon);
         }
     };
 
@@ -133,6 +153,7 @@ class AudioPlayer extends HTMLElement {
 
     resetAudio = () => {
         this.player.pause();
+        this.controls.innerHTML = this.controls.innerHTML.replace(stopIcon, playIcon);
         this.player.currentTime = 0;
         // This is redundant but let's be redundant.
         this.progressBar.style.width = '0%';
