@@ -70,6 +70,7 @@ class AudioPlayer extends HTMLElement {
         controls.id = 'controls';
         shadowRoot.appendChild(controls);
         controls.onclick = this.playOrPauseAudio;
+        controls.ontouchend = this.playOrPauseAudio;
         this.controls = controls;
 
         const timer = document.createElement('span');
