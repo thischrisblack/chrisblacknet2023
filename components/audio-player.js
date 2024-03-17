@@ -69,7 +69,7 @@ class AudioPlayer extends HTMLElement {
         const controls = document.createElement('span');
         controls.id = 'controls';
         shadowRoot.appendChild(controls);
-        controls.addEventListener('click', this.playOrPauseAudio);
+        controls.addEventListener('pointerup', this.playOrPauseAudio);
         this.controls = controls;
 
         const timer = document.createElement('span');
