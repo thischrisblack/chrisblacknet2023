@@ -143,12 +143,19 @@ footer {
     display: inline-block;
 }
 
-.device-warning {
-    background: var(--dark);
-    color: var(--light);
-    padding: 0.5rem 1rem;
-    border-radius: 1rem;
+figure.bad {
+    margin-bottom: 1rem;
     display: none;
+
+    figcaption {
+        font-family: var(--font-serif);
+        font-style: italic;
+        margin: 0.5rem 0;
+    }
+}
+
+audio-player {
+    margin: 0.25rem 0;
 }
 
 @media screen and (min-width: 800px) {
