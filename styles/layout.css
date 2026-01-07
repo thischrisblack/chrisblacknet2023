@@ -1,16 +1,16 @@
 .music {
-    grid-area: 'music';
+    grid-area: "music";
 }
 
 .code {
-    grid-area: 'music';
+    grid-area: "code";
 }
 
 @media screen and (min-width: 800px) {
     .columns {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: ' music code ';
+        grid-template-areas: " music code ";
         column-gap: 6rem;
     }
 }
